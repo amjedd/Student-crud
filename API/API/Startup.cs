@@ -36,14 +36,17 @@ namespace API
         {
             //Configuration from AppSettings
             services.Configure<JWT>(_configuration.GetSection("JWT"));
+
             //User Manager Service
             services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IUserService,UserService>();
+
             //Adding DB Context with MSSQL
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     _configuration.GetConnectionString("DefaultConnection"),
                     b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
+
             //Adding Athentication - JWT
             services.AddAuthentication(options =>
             {
