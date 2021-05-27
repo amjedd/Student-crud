@@ -2,7 +2,9 @@
 using API.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,13 +16,9 @@ namespace API.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly UserManager<User> userManager;
-        private readonly AppSettings appSettings;
         private readonly IUserService _userService;
-        public UserController(IUserService userService,UserManager<User> userManager, IOptions<AppSettings> appSettings)
+        public UserController(IUserService userService)
         {
-            _userManager = userManager;
-            _appSettings = appSettings.Value;
             _userService = userService;
         }
         [HttpPost("register")]
@@ -32,33 +30,6 @@ namespace API.Controllers
             return Ok(result);
         }
         
-        public async Task<ActionResult<string>> Login(LoginRequestModel model)
-        {
-            var user = await _userManager.FindByNameAsync(model.UserName);
-            if(user==null)
-            {
-                return Unauthorized();
-            }
-
-            var passwordValid = await _userManager.CheckPasswordAsync(user, model.Password);
-
-            if(!passwordValid)
-            { return Unauthorized(); }
-
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
-            var tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(new[] { new Claim("id", user.Id.ToString()) }),
-                Expires = DateTime.UtcNow.AddDays(7),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-            };
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            var encryptedToken=  tokenHandler.WriteToken(token);
-
-            return encryptedToken;
-        } 
-
         [HttpPost("token")]
         public async Task<IActionResult> GetTokenAsync(TokenRequestModel model)
         {

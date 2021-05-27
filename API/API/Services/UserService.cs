@@ -58,17 +58,6 @@ namespace API.Services
             }
         }
 
-        // public async Task<string>LoginAsync(LoginRequestModel model)
-        // {
-        //     var user = await _userManager.FindByNameAsync(model.UserName);
-        //     if (user == null)
-        //     {
-        //         return "Unauthorized";
-        //     }
-        //     var passwordValid = await _userManager.CheckPasswordAsync(user, model.Password);
-
-        // }
-
         public async Task<AuthenticationModel> GetTokenAsync(TokenRequestModel model)
         {
             var authenticationModel = new AuthenticationModel();
