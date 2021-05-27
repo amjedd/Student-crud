@@ -9,6 +9,10 @@ namespace API.Services
     public interface IUserService
     {
         Task<string> RegisterAsync(RegisterModel model);
+
+        // Task<string> LoginAsync(LoginRequestModel model);
+
+
         Task<AuthenticationModel> GetTokenAsync(TokenRequestModel model);
         Task<string> AddRoleAsync(AddRoleModel model);
 
