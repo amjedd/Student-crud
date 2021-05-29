@@ -8,9 +8,11 @@ import { StudentComponent } from './components/student/student.component';
 import { StudentCraeteComponent } from './components/student/student-craete/student-craete.component';
 import { StudentDetailsComponent } from './components/student/student-details/student-details.component';
 import { StudentListComponent } from './components/student/student-list/student-list.component';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
+import { LoginComponent } from './components/auth/login/login.component';
+import { JwtInterceptorInterceptor } from './core/helpers/interceptors/jwt-interceptor.interceptor';
 
 @NgModule({
   declarations: [
@@ -19,16 +21,20 @@ import { SharedModule } from './shared/shared.module';
     StudentComponent,
     StudentCraeteComponent,
     StudentDetailsComponent,
-    StudentListComponent
+    StudentListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
     SharedModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptorInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8802,7 +8802,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Amjed\\.nuget\\packages\\": {}
+    "C:\\Users\\hp\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -8810,11 +8810,11 @@
       "projectUniqueName": "D:\\Projects\\Student-crud\\API\\API\\API.csproj",
       "projectName": "API",
       "projectPath": "D:\\Projects\\Student-crud\\API\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\Amjed\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
       "outputPath": "D:\\Projects\\Student-crud\\API\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Amjed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8899,7 +8899,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }
