@@ -41,6 +41,7 @@ namespace API.Services
                 FirstName = model.FirstName,
                 LastName = model.LastName
             };
+
             var userWithSameEmail = await _userManager.FindByEmailAsync(model.Email);
             if (userWithSameEmail == null)
             {

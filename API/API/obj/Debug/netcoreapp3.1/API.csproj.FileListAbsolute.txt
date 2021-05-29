@@ -120,3 +120,8 @@ D:\Projects\Student-crud\API\API\obj\Debug\netcoreapp3.1\API.csproj.CopyComplete
 D:\Projects\Student-crud\API\API\obj\Debug\netcoreapp3.1\API.dll
 D:\Projects\Student-crud\API\API\obj\Debug\netcoreapp3.1\API.pdb
 D:\Projects\Student-crud\API\API\obj\Debug\netcoreapp3.1\API.genruntimeconfig.cache
+D:\Projects\Student-crud\API\API\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\Projects\Student-crud\API\API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\Projects\Student-crud\API\API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Projects\Student-crud\API\API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Projects\Student-crud\API\API\obj\Debug\netcoreapp3.1\API.MvcApplicationPartsAssemblyInfo.cs

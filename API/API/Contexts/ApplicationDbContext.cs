@@ -1,4 +1,5 @@
-﻿using API.Models;
+﻿using API.Entities;
+using API.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -12,6 +13,9 @@ namespace API.Contexts
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
+
         }
+
+        public DbSet<Student> Students { get; set; }
     }
 }

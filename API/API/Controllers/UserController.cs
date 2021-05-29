@@ -22,8 +22,6 @@ namespace API.Controllers
             _userService = userService;
         }
         [HttpPost("register")]
-        //[ApiExplorerSettings(IgnoreApi = true)]
-
         public async Task<ActionResult> RegisterAsync(RegisterModel model)
         {
             var result = await _userService.RegisterAsync(model);
