@@ -1,0 +1,41 @@
+<div style="width: 500px; margin: auto;">
+    <div *ngIf="currentStudent" class="edit-form">
+        <h4>Product</h4>
+        <form>
+            <div class="form-group">
+                <label for="title">Name</label>
+                <input type="text" class="form-control" id="name" [(ngModel)]="currentStudent.name" name="name" />
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="text" class="form-control" id="phone" [(ngModel)]="currentProduct.phone" name="phone" />
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="text" class="form-control" id="age" [(ngModel)]="currentProduct.age" name="age" />
+            </div>
+        </form>
+
+        <button class="badge badge-primary mr-2" *ngIf="currentProduct.available" (click)="setAvailableStatus(false)">
+      Set Not Available
+    </button>
+        <button *ngIf="!currentProduct.available" class="badge badge-primary mr-2" (click)="setAvailableStatus(true)">
+      Set Available
+    </button>
+
+        <button class="badge badge-danger mr-2" (click)="deleteProduct()">
+      Delete
+    </button>
+
+        <button type="submit" class="badge badge-success" (click)="updateProduct()">
+      Update
+    </button>
+        <p></p>
+    </div>
+
+    <div *ngIf="!currentStudent">
+        <br />
+        <p>This product is not accessible</p>
+    </div>
+</div>
