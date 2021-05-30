@@ -13,6 +13,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { LoginComponent } from './components/auth/login/login.component';
 import { JwtInterceptorInterceptor } from './core/helpers/interceptors/jwt-interceptor.interceptor';
+import { RegisterComponent } from './components/auth/register/register.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { JwtInterceptorInterceptor } from './core/helpers/interceptors/jwt-inter
     StudentCraeteComponent,
     StudentDetailsComponent,
     StudentListComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

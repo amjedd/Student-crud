@@ -27,6 +27,10 @@ export class AuthService {
     return this.userSubject.value;
 }
 
+register(user: User) {
+  return this.http.post(`${environment.apiUrl}users/register`, user);
+}
+
 login(email: string, password: string) {
   return this.http.post<any>(`${environment.apiUrl}user/token`, { email, password })
       .pipe(map(user => {
