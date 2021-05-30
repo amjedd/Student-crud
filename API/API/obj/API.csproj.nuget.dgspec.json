@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Student-crud\\API\\API\\API.csproj": {}
+    "D:\\Projects\\Student-crud\\api\\api\\API.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Student-crud\\API\\API\\API.csproj": {
+    "D:\\Projects\\Student-crud\\api\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Student-crud\\API\\API\\API.csproj",
+        "projectUniqueName": "D:\\Projects\\Student-crud\\api\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\Projects\\Student-crud\\API\\API\\API.csproj",
+        "projectPath": "D:\\Projects\\Student-crud\\api\\api\\API.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Student-crud\\API\\API\\obj\\",
+        "outputPath": "D:\\Projects\\Student-crud\\api\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",

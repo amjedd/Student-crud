@@ -3,20 +3,21 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/auth/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { StudentCraeteComponent } from './components/student/student-craete/student-craete.component';
+import { StudentDetailsComponent } from './components/student/student-details/student-details.component';
 import { StudentListComponent } from './components/student/student-list/student-list.component';
 import { AuthGuard } from './core/helpers/guards/auth.guard';
 
 const routes: Routes = [
 
-  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: '', component: StudentListComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
 // otherwise redirect to home
-{ path: '**', redirectTo: '' },
+// { path: '**', redirectTo: '' },
 
   // { path: '', redirectTo: 'students', pathMatch: 'full' },
-  // { path: 'students', component: StudentListComponent },
-  // { path: 'products/:id', component: StudentCraeteComponent },
-  // { path: 'create', component: StudentCraeteComponent },
+  { path: 'students', component: StudentListComponent },
+  { path: 'students/:id', component: StudentDetailsComponent},
+  { path: 'create', component: StudentCraeteComponent },
 
 
 ];

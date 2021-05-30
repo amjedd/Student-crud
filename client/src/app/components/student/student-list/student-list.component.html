@@ -1,41 +1,42 @@
 <div class="list row">
     <div class="col-md-8">
-        <div class="input-group mb-4">
+        <!-- <div class="input-group mb-4">
             <input type="text" class="form-control" placeholder="Search by name" [(ngModel)]="name" />
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button" (click)="searchByName()">
           Search
         </button>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="col-md-6">
         <h4>Student List</h4>
         <ul class="list-group">
-            <li class="list-group-item" *ngFor="let student of students; let i = index" [class.active]="i == currentIndex" (click)="setCurrentProduct(product, i)">
+            <li class="list-group-item" *ngFor="let student of students; let i = index" [class.active]="i == currentIndex" (click)="setCurrentStudent(student, i)">
 
+                {{student.name}}
             </li>
         </ul>
 
-        <button class="m-4 btn btn-sm btn-danger" (click)="deleteAllStudents()">
+        <!-- <button class="m-4 btn btn-sm btn-danger" (click)="deleteAllStudents()">
       Delete All
-    </button>
+    </button> -->
     </div>
     <div class="col-md-6">
         <div *ngIf="currentStudent">
             <h4>Student</h4>
             <div>
-                <label><strong>Name:</strong></label>
+                <label><strong>Name:</strong></label>{{currentStudent.name}}
             </div>
             <div>
-                <label><strong>Phone:</strong></label>
+                <label><strong>Phone:</strong></label>{{currentStudent.phone}}
             </div>
             <div>
-                <label><strong>Age:</strong></label>
+                <label><strong>Age:</strong></label>{{currentStudent.age}}
             </div>
 
 
-            <a class="badge badge-warning" routerLink="/students/">
+            <a class="badge badge-warning" routerLink="/students/{{currentStudent.id}}">
         Edit
       </a>
         </div>

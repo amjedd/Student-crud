@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace API.Controllers
 {
-    [Authorize]
+    // [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class StudentController : ControllerBase
@@ -27,7 +27,7 @@ namespace API.Controllers
         }
 
         [HttpPost("AddStudent")]
-        [Authorize(Roles = "Administrator")]
+        // [Authorize(Roles = "Administrator")]
         public IActionResult AddStudent(Student employee)
         {
             _studentService.AddStudent(employee);
@@ -35,14 +35,14 @@ namespace API.Controllers
         }
 
         [HttpPost("UpdateStudent")]
-        [Authorize(Roles = "Administrator")]
+        // [Authorize(Roles = "Administrator")]
         public IActionResult UpdateStudent(Student employee)
         {
             _studentService.UpdateStudent(employee);
             return Ok();
         }
 
-        [Authorize(Roles = "Administrator")]
+        // [Authorize(Roles = "Administrator")]
         [HttpDelete("DeleteStudent")]
         public IActionResult DeleteStudent(int id)
         {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AT3rcx7itnyg1v8YZNW3KPHS4sTo4yS1HWohNWbLV+2KkM2E05lCps1Wwddf9C1NDjzidtyQK7kAbDFC5sK6rg==",
+  "dgSpecHash": "6Mw0Z6n8gLH1nYiH9ERhIBPHXkzKt3Bha19oZa4dEv1F902QiZ8W92Xg4QlXXGzGbshybZ1oMC10jQNnSOgrZw==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\Student-crud\\API\\API\\API.csproj",
+  "projectFilePath": "D:\\Projects\\Student-crud\\api\\api\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.0\\microsoft.aspnetcore.authentication.jwtbearer.3.1.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.0\\microsoft.aspnetcore.cryptography.internal.3.1.0.nupkg.sha512",

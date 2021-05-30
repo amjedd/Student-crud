@@ -1,7 +1,11 @@
-<!-- <div>
+<div>
     <nav class="navbar navbar-expand navbar-dark bg-dark">
         <a href="#" class="navbar-brand">Student - CRUD</a>
-        <div class="navbar-nav mr-auto">
+        <div class="navbar-nav" *ngIf="user">
+            <a class="nav-item nav-link " routerLink="/">Home</a>
+            <a class="nav-item nav-link" (click)="logout()">Logout</a>
+        </div>
+        <div class="navbar-nav mr-auto" *ngIf="user">
             <li class="nav-item">
                 <a routerLink="students" class="nav-link">Students</a>
             </li>
@@ -13,17 +17,17 @@
     <div class="container mt-5">
         <router-outlet></router-outlet>
     </div>
-</div> -->
+</div>
 
 <!-- nav -->
-<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="user">
+<!-- <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="user">
     <div class="navbar-nav">
         <a class="nav-item nav-link" routerLink="/">Home</a>
         <a class="nav-item nav-link" (click)="logout()">Logout</a>
     </div>
-</nav>
+</nav> -->
 
 <!-- main app container -->
-<div class="container">
+<!-- <div class="container">
     <router-outlet></router-outlet>
-</div>
+</div> -->

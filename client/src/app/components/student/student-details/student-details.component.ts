@@ -34,8 +34,32 @@ export class StudentDetailsComponent implements OnInit {
         });
   }
 
+  updatePublished(status): void {
+    const data = {
+      id: this.currentStudent.name,
+      name: this.currentStudent.name,
+      phone: this.currentStudent.phone,
+      age:this.currentStudent.age,
+    };
+
+    this.studentService.update(this.currentStudent.id, data)
+      .subscribe(
+        response => {
+          console.log(response);
+        },
+        error => {
+          console.log(error);
+        });
+  }
+
   updateStudent(): void {
-    this.studentService.update(this.currentStudent.id, this.currentStudent)
+    const data = {
+      name: this.currentStudent.name,
+      phone: this.currentStudent.phone,
+      age:this.currentStudent.age,
+    };
+
+    this.studentService.update(this.currentStudent.id, data)
       .subscribe(
         response => {
           console.log(response);
@@ -46,7 +70,7 @@ export class StudentDetailsComponent implements OnInit {
         });
   }
 
-  deleteProduct(): void {
+  deleteStudent(): void {
     this.studentService.delete(this.currentStudent.id)
       .subscribe(
         response => {

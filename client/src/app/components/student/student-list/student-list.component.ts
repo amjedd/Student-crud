@@ -8,7 +8,7 @@ import { StudentService } from 'src/app/core/services/student/student.service';
 })
 export class StudentListComponent implements OnInit {
 
-  students: any;
+  students: [any];
   currentStudent = null;
   currentIndex = -1;
   name = '';

@@ -8,7 +8,7 @@ import { StudentService } from 'src/app/core/services/student/student.service';
 })
 export class StudentCraeteComponent implements OnInit {
 
-  student = {name: '',phone: '',age: ''};
+  student = {name:'',phone:'',age:''};
   submitted = false;
 
   constructor(private studentService : StudentService) { }
@@ -19,7 +19,7 @@ export class StudentCraeteComponent implements OnInit {
   createStudent(): void {
     const data = {
       name: this.student.name,
-      description: this.student.phone,
+      phone: this.student.phone,
       age:this.student.age
     };
 
@@ -34,7 +34,7 @@ export class StudentCraeteComponent implements OnInit {
         });
   }
 
-  newProduct(): void {
+  newStudent(): void {
     this.submitted = false;
     this.student = {
       name: '',
